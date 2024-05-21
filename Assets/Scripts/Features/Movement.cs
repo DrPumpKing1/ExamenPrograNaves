@@ -67,6 +67,10 @@ namespace Features
             Vector2 movement = direction.normalized * acceleration;
 
             if(rb != null) rb.AddForce(movement * Time.fixedDeltaTime * 10f);
+            else
+            {
+                transform.position += (Vector3)movement * Time.deltaTime;
+            }
         }
 
         public void LimitSpeed()
