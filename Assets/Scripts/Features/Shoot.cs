@@ -60,6 +60,7 @@ namespace Features
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             if(rb != null) rb.AddForce(shootDirection.normalized * shootForce, ForceMode2D.Impulse);
             Destroy(bullet, bulletsLifeTime);
+            shootTimer = shootCooldown;
         }
 
         public void UpdateFeature(Controller controller)

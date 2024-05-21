@@ -5,8 +5,12 @@ using UnityEngine;
 
 public class Camera : Controller
 {
-    private void Update()
+    protected override void Update()
     {
+        base.Update();
+
+        if(!active) return;
+
         CallFeature<Movement>(new Setting("movementDirection", new Vector2(0, 1), Setting.ValueType.Vector2));
     }
 }
