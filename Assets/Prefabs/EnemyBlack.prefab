@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 7815367406615784409}
   - component: {fileID: 1518166533230691230}
   - component: {fileID: 6427859295295397413}
+  - component: {fileID: 8080373361406731828}
   m_Layer: 9
   m_Name: EnemyBlack
   m_TagString: black
@@ -235,3 +236,24 @@ MonoBehaviour:
   maxSpeed: 0
   acceleration: 0
   rb: {fileID: 0}
+--- !u!114 &8080373361406731828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8599503628646363836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bebe5d99e280ea94f99a53ae21e32185, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings: {fileID: 0}
+  active: 0
+  shootTimer: 0
+  shootDirection: {x: 0, y: 0}
+  shootForce: 0
+  shootCooldown: 0
+  bulletsLifeTime: 0
+  bulletPrefabWhite: {fileID: 0}
+  bulletPrefabBlack: {fileID: 0}

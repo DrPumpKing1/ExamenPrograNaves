@@ -17,4 +17,13 @@ public class Enemy : Controller, LivingEntity, CombatEntity
     {
         SearchFeature<Life>().OnDeath -= () => Destroy(gameObject);
     }
+
+    protected override void FixedUpdate()
+    {
+        base.FixedUpdate();
+
+        if (!active) return;
+
+        CallFeature<Shoot>(new Setting("bulletName", "white", Setting.ValueType.String));
+    }
 }

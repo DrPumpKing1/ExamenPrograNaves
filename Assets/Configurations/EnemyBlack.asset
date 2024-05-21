@@ -174,3 +174,141 @@ MonoBehaviour:
     prefabValue: {fileID: 0}
     scriptableObjectValue: {fileID: 0}
     valueType: 2
+  - key: shootDirection
+    boolValue: 0
+    intValue: 0
+    floatValue: 0
+    vector3Value: {x: 0, y: 0, z: 0}
+    vector3IntValue: {x: 0, y: 0, z: 0}
+    vector2Value: {x: 0, y: -1}
+    stringValue: 
+    layerMaskValue:
+      serializedVersion: 2
+      m_Bits: 0
+    animationCurveValue:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    spriteValue: {fileID: 0}
+    audioClipValue: {fileID: 0}
+    prefabValue: {fileID: 0}
+    scriptableObjectValue: {fileID: 0}
+    valueType: 5
+  - key: bulletsLifeTime
+    boolValue: 0
+    intValue: 0
+    floatValue: 3
+    vector3Value: {x: 0, y: 0, z: 0}
+    vector3IntValue: {x: 0, y: 0, z: 0}
+    vector2Value: {x: 0, y: 0}
+    stringValue: 
+    layerMaskValue:
+      serializedVersion: 2
+      m_Bits: 0
+    animationCurveValue:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    spriteValue: {fileID: 0}
+    audioClipValue: {fileID: 0}
+    prefabValue: {fileID: 0}
+    scriptableObjectValue: {fileID: 0}
+    valueType: 2
+  - key: shootCooldown
+    boolValue: 0
+    intValue: 0
+    floatValue: 1
+    vector3Value: {x: 0, y: 0, z: 0}
+    vector3IntValue: {x: 0, y: 0, z: 0}
+    vector2Value: {x: 0, y: 0}
+    stringValue: 
+    layerMaskValue:
+      serializedVersion: 2
+      m_Bits: 0
+    animationCurveValue:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    spriteValue: {fileID: 0}
+    audioClipValue: {fileID: 0}
+    prefabValue: {fileID: 0}
+    scriptableObjectValue: {fileID: 0}
+    valueType: 2
+  - key: bulletPrefabWhite
+    boolValue: 0
+    intValue: 0
+    floatValue: 0
+    vector3Value: {x: 0, y: 0, z: 0}
+    vector3IntValue: {x: 0, y: 0, z: 0}
+    vector2Value: {x: 0, y: 0}
+    stringValue: 
+    layerMaskValue:
+      serializedVersion: 2
+      m_Bits: 0
+    animationCurveValue:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    spriteValue: {fileID: 0}
+    audioClipValue: {fileID: 0}
+    prefabValue: {fileID: 6149073149852488943, guid: 2728c573aacde084693eab88b68c3d4d, type: 3}
+    scriptableObjectValue: {fileID: 0}
+    valueType: 12
+  - key: bulletPrefabBlack
+    boolValue: 0
+    intValue: 0
+    floatValue: 0
+    vector3Value: {x: 0, y: 0, z: 0}
+    vector3IntValue: {x: 0, y: 0, z: 0}
+    vector2Value: {x: 0, y: 0}
+    stringValue: 
+    layerMaskValue:
+      serializedVersion: 2
+      m_Bits: 0
+    animationCurveValue:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    spriteValue: {fileID: 0}
+    audioClipValue: {fileID: 0}
+    prefabValue: {fileID: 6149073149852488943, guid: 2728c573aacde084693eab88b68c3d4d, type: 3}
+    scriptableObjectValue: {fileID: 0}
+    valueType: 12
+  - key: shootForce
+    boolValue: 0
+    intValue: 0
+    floatValue: 10
+    vector3Value: {x: 0, y: 0, z: 0}
+    vector3IntValue: {x: 0, y: 0, z: 0}
+    vector2Value: {x: 0, y: 0}
+    stringValue: 
+    layerMaskValue:
+      serializedVersion: 2
+      m_Bits: 0
+    animationCurveValue:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    spriteValue: {fileID: 0}
+    audioClipValue: {fileID: 0}
+    prefabValue: {fileID: 0}
+    scriptableObjectValue: {fileID: 0}
+    valueType: 2
