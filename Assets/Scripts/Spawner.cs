@@ -5,6 +5,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public float spawnRate = 2f;
+    public float enemyDestroyTime = 3f;
     public GameObject enemyPrefab;
     [SerializeField] private float timer;
 
@@ -15,7 +16,7 @@ public class Spawner : MonoBehaviour
         {
             timer = 1 /spawnRate;
 
-            Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+            Destroy(Instantiate(enemyPrefab, transform.position, Quaternion.identity), enemyDestroyTime);
         }
     }
 }
