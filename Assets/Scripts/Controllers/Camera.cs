@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Camera : Controller
 {
-    private void FixedUpdate()
+    private void Update()
     {
         CallFeature<Movement>(new Setting("movementDirection", new Vector2(0, 1), Setting.ValueType.Vector2));
     }
