@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Features
 {
-    public class Movement :  MonoBehaviour, IActivable, IFeatureSetup, IFeatureFixedUpdate, IFeatureAction //Other channels
+    public class Friction :  MonoBehaviour, IActivable, IFeatureSetup, IFeatureFixedUpdate //Other channels
     {
         //Configuration
         [Header("Settings")]
@@ -15,8 +15,7 @@ namespace Features
         //States
         //Properties
         [Header("Properties")]
-        public float maxSpeed;
-        public float acceleration;
+        public float friction;
         //References
         //Componentes
         [Header("Components")]
@@ -31,8 +30,8 @@ namespace Features
         {
             settings = controller.settings;
 
-            maxSpeed = settings.Search("maxSpeed");
-            acceleration = settings.Search("acceleration");
+            //Setup Properties
+            friction = settings.Search("friction");
 
             ToggleActive(true);
         }
@@ -41,45 +40,36 @@ namespace Features
         {
             if(!active) return;
 
-            LimitSpeed();
-
             InputEntity input = controller as InputEntity;
             if(input == null) return;
 
-            Move(input.directionInput);
+            Vector2 direction = input.directionInput;
+            ApplyFriction(direction);
         }
 
-        public void FeatureAction(Controller controller, params Setting[] settings)
+        public void ApplyFriction(Vector2 direction)
         {
-            if(!active) return;
-            
-            if(settings.Length <= 0) return;
-        
-            Vector2 direction = settings[0].vector2Value;
-            
-            Move(direction);
-        }
+            if (!active)
+            {
+                rb.drag = 0;
+                return;
+            }
 
-        public void Move(Vector2 direction)
-        {
-            if (direction == Vector2.zero || !active) return;
+            Vector2 velocity = rb.velocity;
+            bool changeDir = changeDirection(direction, velocity);
 
-            Vector2 movement = direction.normalized * acceleration;
-
-            if(rb != null) rb.AddForce(movement * Time.fixedDeltaTime * 10f);
+            if (changeDir)
+            {
+                rb.drag = friction;
+            }
             else
             {
-                transform.position += (Vector3)movement * Time.deltaTime;
+                rb.drag = 0;
             }
-        }
 
-        public void LimitSpeed()
-        {
-            if (!active || rb == null) return;
-
-            if (rb.velocity.magnitude > maxSpeed)
+            bool changeDirection(Vector2 direction, Vector2 velocity)
             {
-                rb.velocity = rb.velocity.normalized * maxSpeed;
+                return Vector2.Dot(direction, velocity) < 0 || direction == Vector2.zero;
             }
         }
 
